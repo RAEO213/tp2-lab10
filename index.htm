@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Site Monopage - TP2 Amélioré</title>
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="css/normalize.css" />
+
+    <!-- Google Fonts (3 polices différentes) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/formulaire.css" />
+  </head>
+  <body>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero conteneur" id="accueil">
+      <header class="hero__header centre">
+        <h1 class="hero__title poppins">Site Monopage</h1>
+        <p class="hero__subtitle montserrat">
+          Une expérience moderne et fluide
+        </p>
+
+        <!-- Menu Burger Mobile -->
+        <div class="navigation">
+          <input type="checkbox" id="chk-burger" class="chk-burger" />
+          <label for="chk-burger" class="menu__burger">
+            <span></span><span></span><span></span>
+          </label>
+
+          <nav class="menu-mobile">
+            <a href="#accueil">Accueil</a>
+            <a href="#un">Section 1</a>
+            <a href="#deux">Tableau</a>
+            <a href="#articles">Articles</a>
+            <a href="#galerie-photos">Galerie Photos</a>
+            <a href="#videos">Vidéos</a>
+            <a href="#trois">À propos</a>
+            <a href="#quatre">Services</a>
+            <a href="#inscription">Inscription</a>
+          </nav>
+        </div>
+
+        <div class="hero__content">
+          <p>
+            Découvrez un design épuré, une navigation fluide et des animations
+            subtiles.
+          </p>
+          <a href="#inscription" class="btn-primary">S'inscrire maintenant</a>
+        </div>
+      </header>
+    </section>
+
+    <!-- ==================== SECTION 1 ==================== -->
+    <section class="conteneur section-bg-1" id="un">
+      <div class="centre">
+        <h2 class="section-title playfair">Section Un</h2>
+        <p class="montserrat">
+          Contenu riche avec une typographie soignée et des couleurs
+          harmonieuses.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION TABLEAU ==================== -->
+    <section class="conteneur section-bg-2" id="deux">
+      <div class="centre">
+        <h2 class="section-title playfair">Tableau des Formations</h2>
+        <div class="table-container">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Formation</th>
+                <th>Durée</th>
+                <th>Niveau</th>
+                <th>Prix</th>
+                <th>Places</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>HTML & CSS Avancé</td>
+                <td>6 semaines</td>
+                <td>Intermédiaire</td>
+                <td>490 €</td>
+                <td class="success">Disponible</td>
+              </tr>
+              <tr>
+                <td>JavaScript Moderne</td>
+                <td>8 semaines</td>
+                <td>Avancé</td>
+                <td>690 €</td>
+                <td class="warning">Bientôt complet</td>
+              </tr>
+              <tr>
+                <td>React & Next.js</td>
+                <td>10 semaines</td>
+                <td>Expert</td>
+                <td>990 €</td>
+                <td class="danger">Complet</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION ARTICLES ==================== -->
+    <section class="conteneur section-articles" id="articles">
+      <div class="centre">
+        <h2 class="section-title playfair">Nos Formations en Vedette</h2>
+        <p
+          class="montserrat"
+          style="text-align: center; margin-bottom: 60px; font-size: 1.2rem"
+        >
+          Découvrez nos programmes phares qui transforment les débutants en
+          experts
+        </p>
+
+        <div class="articles-container">
+          <!-- Article 1 -- Image à gauche -->
+          <article class="article-item reverse-mobile">
+            <figure class="article-figure">
+              <img src="images/HTML.webp" alt="Formation HTML & CSS" />
+              <figcaption>HTML & CSS Avancé</figcaption>
+            </figure>
+            <div class="article-content">
+              <h3>Maîtrisez les bases solides du web</h3>
+              <p>
+                Apprenez à créer des sites modernes, responsives et accessibles
+                avec les dernières techniques HTML5 et CSS3 (Flexbox, Grid,
+                animations).
+              </p>
+              <p>
+                <strong>Durée :</strong> 6 semaines •
+                <strong>Niveau :</strong> Intermédiaire
+              </p>
+            </div>
+          </article>
+
+          <!-- Article 2 -- Image à droite -->
+          <article class="article-item">
+            <figure class="article-figure">
+              <img src="images/js.png" alt="Formation JavaScript" />
+              <figcaption>JavaScript Moderne</figcaption>
+            </figure>
+            <div class="article-content">
+              <h3>Devenez autonome avec JavaScript</h3>
+              <p>
+                ES6+, programmation asynchrone, DOM, API REST, projets réels…
+                Tout pour passer au niveau supérieur.
+              </p>
+              <p>
+                <strong>Durée :</strong> 8 semaines •
+                <strong>Niveau :</strong> Avancé
+              </p>
+            </div>
+          </article>
+
+          <!-- Article 3 -- Image à gauche -->
+          <article class="article-item reverse-mobile">
+            <figure class="article-figure">
+              <img src="images/programmation.jpg" alt="Formation React" />
+              <figcaption>React & Next.js</figcaption>
+            </figure>
+            <div class="article-content">
+              <h3>Maîtrisez les frameworks les plus demandés</h3>
+              <p>
+                Components, hooks, state management, SSR avec Next.js… Devenez
+                un développeur frontend recherché.
+              </p>
+              <p>
+                <strong>Durée :</strong> 10 semaines •
+                <strong>Niveau :</strong> Expert
+              </p>
+            </div>
+          </article>
+
+          <!-- Article 4 --- Image à droite -->
+          <article class="article-item">
+            <figure class="article-figure">
+              <img src="images/fullstack.webp" alt="Formation Fullstack" />
+              <figcaption>Fullstack Developer</figcaption>
+            </figure>
+            <div class="article-content">
+              <h3>Du frontend au backend</h3>
+              <p>
+                Node.js, Express, bases de données, authentification,
+                déploiement… Devenez un développeur complet.
+              </p>
+              <p>
+                <strong>Durée :</strong> 12 semaines •
+                <strong>Niveau :</strong> Expert
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION GALERIE PHOTOS ==================== -->
+    <section class="conteneur section-galerie" id="galerie-photos">
+      <div class="centre">
+        <h2 class="section-title playfair">Galerie Photos</h2>
+        <p
+          class="montserrat"
+          style="text-align: center; margin-bottom: 60px; font-size: 1.2rem"
+        >
+          Découvrez l'univers de la programmation et des formations web
+        </p>
+
+        <div class="galerie-grid">
+          <!-- Image 1 -->
+          <div class="galerie-item">
+            <img
+              src="images/cd1.jpg"
+              alt="Écran avec du code web development"
+            />
+          </div>
+
+          <!-- Image 2 -->
+          <div class="galerie-item">
+            <img src="images/cd2.webp" alt="Introduction au web development" />
+          </div>
+
+          <!-- Image 3 -->
+          <div class="galerie-item">
+            <img src="images/cb1.avif" alt="Code HTML sur écran" />
+          </div>
+
+          <!-- Image 4 -->
+          <div class="galerie-item">
+            <img
+              src="images/cb2.webp"
+              alt="Apprentissage du développement web"
+            />
+          </div>
+
+          <!-- Image 5 -->
+          <div class="galerie-item">
+            <img
+              src="images/dvlp1.jpeg"
+              alt="Programmeur avec plusieurs écrans"
+            />
+          </div>
+
+          <!-- Image 6 -->
+          <div class="galerie-item">
+            <img
+              src="images/dvlp2.webp"
+              alt="Développeur au bureau avec plusieurs moniteurs"
+            />
+          </div>
+
+          <!-- Image 7 -->
+          <div class="galerie-item">
+            <img src="images/j1.png" alt="Setup idéal pour coder" />
+          </div>
+
+          <!-- Image 8 -->
+          <div class="galerie-item">
+            <img src="images/j2.webp" alt="Bootcamp web development" />
+          </div>
+
+          <!-- Image 9 -->
+          <div class="galerie-item">
+            <img src="images/js.png" alt="Étudiants en formation coding" />
+          </div>
+
+          <!-- Image 10 -->
+          <div class="galerie-item">
+            <img
+              src="images/E1.webp"
+              alt="Développeurs travaillant en équipe"
+            />
+          </div>
+          <!-- Image 10 -->
+          <div class="galerie-item">
+            <img
+              src="images/E2.avif"
+              alt="Développeurs travaillant en équipe"
+            />
+          </div>
+          <!-- Image 12 -->
+          <div class="galerie-item">
+            <img
+              src="images/fullstack.webp"
+              alt="Développeurs travaillant en équipe"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION VIDÉOS ==================== -->
+    <section class="conteneur section-videos" id="videos">
+      <div class="centre">
+        <h2 class="section-title playfair">Nos Tutoriels Vidéo</h2>
+        <p
+          class="montserrat"
+          style="text-align: center; margin-bottom: 60px; font-size: 1.2rem"
+        >
+          Découvrez nos formations en vidéo pour apprendre à votre rythme
+        </p>
+
+        <div class="videos-grid">
+          <!-- Vidéo 1 -->
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/yU20m38Kwgw"
+              title="Cours complet HTML & CSS"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+
+          <!-- Vidéo 2 -->
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/_nPOTl-I4cM"
+              title="Cours complet JavaScript"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+
+          <!-- Vidéo 3 -->
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/DHjqpvDnNGE"
+              title="Cours complet React JS"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== AUTRES SECTIONS ==================== -->
+    <section class="conteneur section-bg-3" id="trois">
+      <div class="centre">
+        <h2 class="section-title playfair">À Propos</h2>
+        <p class="montserrat">
+          Nous formons les développeurs web de demain avec passion et rigueur.
+        </p>
+      </div>
+    </section>
+
+    <section class="conteneur section-bg-4" id="quatre">
+      <div class="centre">
+        <h2 class="section-title playfair">Nos Services</h2>
+        <p class="montserrat">
+          Formations en ligne, coaching personnalisé, projets réels.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== FORMULAIRE ==================== -->
+    <section class="conteneur" id="inscription">
+      <div class="centre">
+        <h2 class="section-title playfair">Inscription Newsletter</h2>
+        <form class="formulaire">
+          <div class="formulaire__div">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" placeholder="Votre nom" required />
+          </div>
+          <div class="formulaire__div">
+            <label for="prenom">Prénom</label>
+            <input
+              type="text"
+              id="prenom"
+              placeholder="Votre prénom"
+              required
+            />
+          </div>
+          <div class="formulaire__div">
+            <label for="courriel">Courriel</label>
+            <input
+              type="email"
+              id="courriel"
+              placeholder="votre@email.com"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-primary">S'inscrire</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== PIED DE PAGE MULTI-COLONNES ==================== -->
+    <footer class="footer">
+      <div class="centre footer-grid">
+        <div class="footer-col">
+          <h4 class="poppins">À propos</h4>
+          <p>Formation web moderne depuis 2020.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="poppins">Liens rapides</h4>
+          <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#deux">Formations</a></li>
+            <li><a href="#inscription">Inscription</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="poppins">Contact</h4>
+          <p>contact@monsite.com<br />01 23 45 67 89</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="poppins">Réseaux</h4>
+          <p>Instagram • LinkedIn • GitHub</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>2025 Mon Site Monopage. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </body>
+</html>
