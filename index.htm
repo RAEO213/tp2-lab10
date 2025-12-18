@@ -1,407 +1,202 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mon Site Monopage - TP2 Amélioré</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Site Monopage - TP2</title>
 
-    <!--icône de la page--> 
-    <link rel="icon" type="image/png" href="images/logo.jpg" />
+  <!-- Normalize -->
+  <link rel="stylesheet" href="css/normalize.css">
 
-    <!-- Normalize -->
-    <link rel="stylesheet" href="css/normalize.css" />
+  <!-- Google Fonts (OBLIGATOIRES) -->
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Google Fonts (3 polices différentes) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/formulaire.css">
+  <link rel="stylesheet" href="css/recettes.css">
+</head>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/menu.css" />
-    <link rel="stylesheet" href="css/formulaire.css" />
-  </head>
-  <body>
-    <!-- ==================== HERO ==================== -->
-    <section class="hero conteneur" id="accueil">
-      <header class="hero__header centre">
-        <h1 class="hero__title poppins">Site Monopage</h1>
-        <p class="hero__subtitle montserrat">
-          Une expérience moderne et fluide
-        </p>
+<body>
 
-        <!-- Menu Burger Mobile -->
-        <div class="navigation">
-          <input type="checkbox" id="chk-burger" class="chk-burger" />
-          <label for="chk-burger" class="menu__burger">
-            <span></span><span></span><span></span>
-          </label>
+<!-- ==================== HERO ==================== -->
+<section class="hero conteneur" id="accueil">
+  <header class="hero__header centre">
+    <h1 class="hero__title">Site Monopage</h1>
+    <p class="hero__subtitle">Une expérience moderne et fluide</p>
 
-          <nav class="menu-mobile">
-            <a href="#accueil">Accueil</a>
-            <a href="#tableau">Tableau</a>
-            <a href="#articles">Articles</a>
-            <a href="#galerie-photos">Galerie Photos</a>
-            <a href="#videos">Vidéos</a>
-            <a href="#inscription">Inscription</a>
-          </nav>
-        </div>
+    <!-- MENU BURGER -->
+    <div class="navigation">
+      <input type="checkbox" id="chk-burger" class="chk-burger">
+      <label for="chk-burger" class="menu__burger">
+        <span></span><span></span><span></span>
+      </label>
 
-        <div class="hero__content">
-          <p>
-            Découvrez un design épuré, une navigation fluide et des animations
-            subtiles.
-          </p>
-          <a href="#inscription" class="btn-primary">S'inscrire maintenant</a>
-        </div>
-      </header>
-    </section>
+      <nav class="menu-mobile">
+        <a href="#accueil">Accueil</a>
+        <a href="#recette">Recettes</a>
+        <a href="#inscription">Inscription</a>
+      </nav>
+    </div>
 
+    <div class="hero__content">
+      <p>Découvrez un design épuré et une navigation fluide.</p>
+      <a href="#inscription" class="btn-primary">S'inscrire</a>
+    </div>
+  </header>
+</section>
 
-
-    <!-- ==================== SECTION TABLEAU ==================== -->
-    <section class="conteneur section-bg-2" id="tableau">
-      <div class="centre">
-        <h2 class="section-title playfair">Tableau des Formations</h2>
-        <div class="table-container">
-          <table class="styled-table">
-            <thead>
-              <tr>
-                <th>Formation</th>
-                <th>Durée</th>
-                <th>Niveau</th>
-                <th>Prix</th>
-                <th>Places</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>HTML & CSS Avancé</td>
-                <td>6 semaines</td>
-                <td>Intermédiaire</td>
-                <td>490 €</td>
-                <td class="success">Disponible</td>
-              </tr>
-              <tr>
-                <td>JavaScript Moderne</td>
-                <td>8 semaines</td>
-                <td>Avancé</td>
-                <td>690 €</td>
-                <td class="warning">Bientôt complet</td>
-              </tr>
-              <tr>
-                <td>React & Next.js</td>
-                <td>10 semaines</td>
-                <td>Expert</td>
-                <td>990 €</td>
-                <td class="danger">Complet</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+<!-- ==================== RECETTES (HTML FOURNI – INTOUCHÉ) ==================== -->
+<!-- ////////////////////////////////////////////////  Recettes -->
+ <link rel="stylesheet" href="css/recettes.css">
+<div class="global">
+  <section class="centre" id="recette">
+    <h1>Recettes indiennes</h1>
+    <article class="recette">
+      <div class="recette__div">
+        <h2>Ingrédients</h2>
+        <ol>
+          <li>500 g d'épinards frais (ou 300 g d'épinards surgelés)</li>
+          <li>1 oignon moyen émincé</li>
+          <li>2 gousses d'ail hachées</li>
+          <li>1 petit morceau de gingembre (1 c. à café râpé)</li>
+          <li>2 c. à soupe d'huile (ou ghee)</li>
+          <li>
+            1 tomate coupée en dés (ou 3 c. à soupe de tomates concassées)
+          </li>
+          <li>1 c. à café de curry en poudre</li>
+          <li>½ c. à café de curcuma</li>
+          <li>½ c. à café de cumin moulu</li>
+          <li>½ c. à café de coriandre moulue</li>
+          <li>Une pincée de piment (facultatif)</li>
+          <li>100 ml de lait de coco ou 2 c. à soupe de crème</li>
+          <li>Sel, poivre</li>
+          <li>Un peu de jus de citron (optionnel)</li>
+        </ol>
       </div>
-    </section>
-
-    <!-- ==================== SECTION ARTICLES ==================== -->
-    <section class="conteneur section-articles" id="articles">
-      <div class="centre">
-        <h2 class="section-title playfair">Nos Formations en Vedette</h2>
-        <p
-          class="montserrat"
-          style="text-align: center; margin-bottom: 60px; font-size: 1.2rem"
-        >
-          Découvrez nos programmes phares qui transforment les débutants en
-          experts
-        </p>
-
-        <div class="articles-container">
-          <!-- Article 1 -- Image à gauche -->
-          <article class="article-item reverse-mobile">
-            <figure class="article-figure">
-              <img src="images/HTML.webp" alt="Formation HTML & CSS" />
-              <figcaption>HTML & CSS Avancé</figcaption>
-            </figure>
-            <div class="article-content">
-              <h3>Maîtrisez les bases solides du web</h3>
-              <p>
-                Apprenez à créer des sites modernes, responsives et accessibles
-                avec les dernières techniques HTML5 et CSS3 (Flexbox, Grid,
-                animations).
-              </p>
-              <p>
-                <strong>Durée :</strong> 6 semaines •
-                <strong>Niveau :</strong> Intermédiaire
-              </p>
-            </div>
-          </article>
-
-          <!-- Article 2 -- Image à droite -->
-          <article class="article-item">
-            <figure class="article-figure">
-              <img src="images/js.png" alt="Formation JavaScript" />
-              <figcaption>JavaScript Moderne</figcaption>
-            </figure>
-            <div class="article-content">
-              <h3>Devenez autonome avec JavaScript</h3>
-              <p>
-                ES6+, programmation asynchrone, DOM, API REST, projets réels…
-                Tout pour passer au niveau supérieur.
-              </p>
-              <p>
-                <strong>Durée :</strong> 8 semaines •
-                <strong>Niveau :</strong> Avancé
-              </p>
-            </div>
-          </article>
-
-          <!-- Article 3 -- Image à gauche -->
-          <article class="article-item reverse-mobile">
-            <figure class="article-figure">
-              <img src="images/programmation.jpg" alt="Formation React" />
-              <figcaption>React & Next.js</figcaption>
-            </figure>
-            <div class="article-content">
-              <h3>Maîtrisez les frameworks les plus demandés</h3>
-              <p>
-                Components, hooks, state management, SSR avec Next.js… Devenez
-                un développeur frontend recherché.
-              </p>
-              <p>
-                <strong>Durée :</strong> 10 semaines •
-                <strong>Niveau :</strong> Expert
-              </p>
-            </div>
-          </article>
-
-          <!-- Article 4 --- Image à droite -->
-          <article class="article-item">
-            <figure class="article-figure">
-              <img src="images/fullstack.webp" alt="Formation Fullstack" />
-              <figcaption>Fullstack Developer</figcaption>
-            </figure>
-            <div class="article-content">
-              <h3>Du frontend au backend</h3>
-              <p>
-                Node.js, Express, bases de données, authentification,
-                déploiement… Devenez un développeur complet.
-              </p>
-              <p>
-                <strong>Durée :</strong> 12 semaines •
-                <strong>Niveau :</strong> Expert
-              </p>
-            </div>
-          </article>
-        </div>
+      <div class="recette__div">
+        <h2>Préparation</h2>
+        <ol>
+          <li>
+            <strong>Préparer les épinards</strong> - Rince les épinards, enlève
+            les grosses tiges et hache-les légèrement. Si tu utilises des
+            épinards surgelés, fais-les simplement décongeler.
+          </li>
+          <li>
+            <strong>Faire revenir la base aromatique</strong> - Dans une poêle,
+            chauffe l'huile. Ajoute l'oignon et fais-le revenir jusqu'à ce qu'il
+            soit doré. Incorpore l'ail et le gingembre, cuis 1 minute.
+          </li>
+          <li>
+            <strong>Ajouter les épices</strong> Ajoute le curry, le curcuma, le
+            cumin, la coriandre et le piment. Fais griller les épices 30
+            secondes pour libérer les arômes.
+          </li>
+          <li>
+            <strong>Ajouter tomates et épinards</strong> - Mets les tomates et
+            cuis 2 minutes. Ajoute les épinards, mélange et laisse cuire 5
+            minutes.
+          </li>
+          <li>
+            <strong>Crémer le curry</strong> - Verse le lait de coco ou la
+            crème. Laisse réduire à feu doux 3 à 5 minutes. Ajuste le sel, le
+            poivre et ajoute un filet de jus de citron si tu veux un goût plus
+            frais.
+          </li>
+        </ol>
       </div>
-    </section>
-
-    <!-- ==================== SECTION GALERIE PHOTOS ==================== -->
-    <section class="conteneur section-galerie" id="galerie-photos">
-      <div class="centre">
-        <h2 class="section-title playfair">Galerie Photos</h2>
-        <p
-          class="montserrat"
-          style="text-align: center; margin-bottom: 60px; font-size: 1.2rem"
-        >
-          Découvrez l'univers de la programmation et des formations web
-        </p>
-
-        <div class="galerie-grid">
-          <!-- Image 1 -->
-          <div class="galerie-item">
-            <img
-              src="images/cd1.jpg"
-              alt="Écran avec du code web development"
-            />
-          </div>
-
-          <!-- Image 2 -->
-          <div class="galerie-item">
-            <img src="images/cd2.webp" alt="Introduction au web development" />
-          </div>
-
-          <!-- Image 3 -->
-          <div class="galerie-item">
-            <img src="images/cb1.avif" alt="Code HTML sur écran" />
-          </div>
-
-          <!-- Image 4 -->
-          <div class="galerie-item">
-            <img
-              src="images/cb2.webp"
-              alt="Apprentissage du développement web"
-            />
-          </div>
-
-          <!-- Image 5 -->
-          <div class="galerie-item">
-            <img
-              src="images/dvlp1.jpeg"
-              alt="Programmeur avec plusieurs écrans"
-            />
-          </div>
-
-          <!-- Image 6 -->
-          <div class="galerie-item">
-            <img
-              src="images/dvlp2.webp"
-              alt="Développeur au bureau avec plusieurs moniteurs"
-            />
-          </div>
-
-          <!-- Image 7 -->
-          <div class="galerie-item">
-            <img src="images/j1.png" alt="Setup idéal pour coder" />
-          </div>
-
-          <!-- Image 8 -->
-          <div class="galerie-item">
-            <img src="images/j2.webp" alt="Bootcamp web development" />
-          </div>
-
-          <!-- Image 9 -->
-          <div class="galerie-item">
-            <img src="images/js.png" alt="Étudiants en formation coding" />
-          </div>
-
-          <!-- Image 10 -->
-          <div class="galerie-item">
-            <img
-              src="images/E1.webp"
-              alt="Développeurs travaillant en équipe"
-            />
-          </div>
-          <!-- Image 10 -->
-          <div class="galerie-item">
-            <img
-              src="images/E2.avif"
-              alt="Développeurs travaillant en équipe"
-            />
-          </div>
-          <!-- Image 12 -->
-          <div class="galerie-item">
-            <img
-              src="images/fullstack.webp"
-              alt="Développeurs travaillant en équipe"
-            />
-          </div>
-        </div>
+      <div class="recette__image">
+        <figure class="recette__figure">
+          <img src="images/epinards-indien.webp" alt="" class="recette__img" />
+          <figcaption class="recette__figcaption">
+            Épinards à l'indienne
+          </figcaption>
+        </figure>
       </div>
-    </section>
-
-    <!-- ==================== SECTION VIDÉOS ==================== -->
-    <section class="conteneur section-videos" id="videos">
-      <div class="centre">
-        <h2 class="section-title playfair">Nos Tutoriels Vidéo</h2>
-        <p
-          class="montserrat"
-          style="text-align: center; margin-bottom: 60px; font-size: 1.2rem"
-        >
-          Découvrez nos formations en vidéo pour apprendre à votre rythme
-        </p>
-
-        <div class="videos-grid">
-          <!-- Vidéo 1 -->
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/yU20m38Kwgw"
-              title="Cours complet HTML & CSS"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            >
-            </iframe>
-          </div>
-
-          <!-- Vidéo 2 -->
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/_nPOTl-I4cM"
-              title="Cours complet JavaScript"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            >
-            </iframe>
-          </div>
-
-          <!-- Vidéo 3 -->
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/DHjqpvDnNGE"
-              title="Cours complet React JS"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            >
-            </iframe>
-          </div>
-        </div>
+    </article>
+    <article class="recette">
+      <div class="recette__div">
+        <h2>Ingrédients</h2>
+        <h3>Base aux épinards</h3>
+        <ol>
+          <li>500 g d'épinards frais (ou 300 g surgelés)</li>
+          <li>1 oignon moyen, haché finement</li>
+          <li>2 gousses d'ail, hachées</li>
+          <li>1 c. à café de gingembre frais râpé</li>
+          <li>2 c. à soupe d'huile ou de ghee</li>
+          <li>1 tomate moyenne (ou 3 c. à soupe de tomates concassées)</li>
+          <li>1 c. à café de cumin moulu</li>
+          <li>1 c. à café de coriandre moulue</li>
+          <li>½ c. à café de curcuma</li>
+          <li>1 c. à café de garam masala</li>
+          <li>½ c. à café de piment (facultatif)</li>
+          <li>Sel au goût</li>
+        </ol>
+        <h3>Fromage</h3>
+        <ol>
+          <li>200 à 250 g de paneer (ou halloumi doux en remplacement)</li>
+          <li>
+            2 à 3 c. à soupe de crème (ou lait de coco pour version sans
+            produits laitiers)
+          </li>
+        </ol>
       </div>
-    </section>
+      <div class="recette__div">
+        <h2>Préparation</h2>
+        <ol>
+          <li>
+            <strong>Les épinards</strong> - Blanchir les épinards (clé pour la
+            couleur) - Porte une casserole d'eau à ébullition. - Ajoute les
+            épinards 30 à 45 secondes. - Égoutte-les et plonge-les immédiatement
+            dans de l'eau froide. - Mixe-les pour obtenir une purée lisse.
+          </li>
+          <li>
+            <strong>Préparer le paneer </strong>
+            - Coupe le paneer en cubes. - Optionnel mais traditionnel : fais-les
+            dorer légèrement dans un peu d'huile. Réserve.
+          </li>
+          <li>
+            <strong>Base aromatique</strong> - Dans une poêle, chauffe l'huile
+            ou le ghee. - Ajoute l'oignon, fais-le revenir jusqu'à ce qu'il soit
+            bien doré. - Ajoute ail et gingembre, cuis 1 minute.
+          </li>
 
-    <!-- ==================== FORMULAIRE ==================== -->
-    <section class="conteneur" id="inscription">
-      <div class="centre">
-        <h2 class="section-title playfair">Inscription Newsletter</h2>
-        <form class="formulaire">
-          <div class="formulaire__div">
-            <label for="nom">Nom</label>
-            <input type="text" id="nom" placeholder="Votre nom" required />
-          </div>
-          <div class="formulaire__div">
-            <label for="prenom">Prénom</label>
-            <input
-              type="text"
-              id="prenom"
-              placeholder="Votre prénom"
-              required
-            />
-          </div>
-          <div class="formulaire__div">
-            <label for="courriel">Courriel</label>
-            <input
-              type="email"
-              id="courriel"
-              placeholder="votre@email.com"
-              required
-            />
-          </div>
-          <button type="submit" class="btn-primary">S'inscrire</button>
-        </form>
+          <li>
+            <strong>Épices et tomate</strong>
+            - Incorpore cumin, coriandre, curcuma, piment. - Ajoute la tomate et
+            laisse cuire jusqu'à obtenir une pâte épaisse.
+          </li>
+          <li>
+            <strong>Assemblage</strong> - Verse la purée d'épinards. - Laisse
+            mijoter 5 minutes à feu doux. - Ajoute le paneer et la crème. -
+            Termine avec le garam masala. - Ajuste le sel.
+          </li>
+        </ol>
       </div>
-    </section>
+      <div class="recette__image">
+        <figure class="recette__figure">
+          <img class="recette__img" src="images/palak-paner.jpg" alt="" />
+          <figcaption class="recette__figcaption">Palak paneer</figcaption>
+        </figure>
+      </div>
+    </article>
+  </section>
+</div>
+<!-- ////////////////////////////////////////////////  fin Recettes -->
 
-    <!-- ==================== PIED DE PAGE MULTI-COLONNES ==================== -->
-    <footer class="footer">
-      <div class="centre footer-grid">
-        <div class="footer-col">
-          <h4 class="poppins">À propos</h4>
-          <p>Formation web moderne depuis 2020.</p>
-        </div>
-        <div class="footer-col">
-          <h4 class="poppins">Liens rapides</h4>
-          <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#deux">Formations</a></li>
-            <li><a href="#inscription">Inscription</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4 class="poppins">Contact</h4>
-          <p>contact@monsite.com<br />01 23 45 67 89</p>
-        </div>
-        <div class="footer-col">
-          <h4 class="poppins">Réseaux</h4>
-          <p>Instagram • LinkedIn • GitHub</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>2025 Mon Site Monopage. Tous droits réservés.</p>
-      </div>
-    </footer>
-  </body>
+
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="right">
+    <a href="#accueil" class="btn-home" aria-label="Retour à l'accueil">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="60" height="60">
+    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+  </svg>
+</a>
+  </div>
+</footer>
+
+</body>
 </html>

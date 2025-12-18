@@ -1,0 +1,156 @@
+/* recettes.css - Styles EXCLUSIFS à la section recettes */
+
+/* Import des polices (déjà dans head, mais au cas où) */
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Section principale */
+#recette {
+  font-family: 'Montserrat', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  background-color: #bdba5f; /* Optionnel : fond léger comme sur la maquette */
+}
+
+#recette h1 {
+  font-family: 'DynaPuff', cursive;
+  font-size: clamp(3rem, 8vw, 6rem);
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #333;
+  font-weight: 600;
+}
+
+#recette h2,
+#recette h3 {
+  font-family: 'DynaPuff', cursive;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+#recette h2 {
+  font-size: 2.2rem;
+}
+
+#recette h3 {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+
+/* Ligne pointillée entre les recettes */
+.recette + .recette {
+  border-top: 3px dotted #bbb;
+  padding-top: 4rem;
+  margin-top: 4rem;
+}
+
+/* Chaque recette en Flexbox */
+.recette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* Sur petit écran : tout en colonne */
+.recette__div,
+.recette__image {
+  flex: 1 1 100%;
+}
+
+/* Image */
+.recette__figure {
+  margin: 0;
+  text-align: center;
+}
+
+.recette__img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.recette__figcaption {
+  margin-top: 1.5rem;
+  font-family: 'DynaPuff', cursive;
+  font-size: 1.4rem;
+  color: #444;
+  font-style: italic;
+}
+
+/* Rotation alternée des images */
+.recette:nth-child(odd) .recette__img {
+  transform: rotate(5deg);
+}
+
+.recette:nth-child(even) .recette__img {
+  transform: rotate(-5deg);
+}
+
+/* Hover : image droite + zoom léger */
+.recette__img:hover {
+  transform: rotate(0deg) scale(1.05) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* ==================================== */
+/* GRAND ÉCRAN (>= 900px) */
+/* ==================================== */
+@media (min-width: 900px) {
+  .recette {
+    flex-wrap:wrap;
+    align-items: stretch;
+  }
+
+  /* Colonne gauche : ingrédients + préparation (60%) */
+  .recette__div:first-child {
+    flex: 2 1 60%;
+    order: 1;
+  }
+
+  /* Préparation : pleine largeur sous ingrédients */
+  .recette__div:nth-child(2) {
+    flex: 1 1 100%;
+    order: 2;
+    margin-top: 2rem;
+  }
+
+  /* Image : 35-40% */
+  .recette__image {
+    flex: 1 1 35%;
+    order: 3;
+    align-self: center;
+  }
+
+
+  /* Option alternative avec order (plus robuste si plus de recettes) */
+  
+  .recette:nth-child(even) .recette__image {
+    order: -1;
+  }
+  .recette:nth-child(even) .recette__div:first-child {
+    order: 1;
+  }
+  .recette:nth-child(even) .recette__div:nth-child(2) {
+    order: 2;
+  }
+
+}
+
+/* Listes plus aérées */
+#recette ol {
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+#recette li {
+  margin-bottom: 0.8rem;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+#recette strong {
+  color: #1e40af;
+}
